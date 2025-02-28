@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script defer src="js/home.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <button class="add-event-btn">Add Event</button>
+            <div class="search-container">
+                <input type="text" id="search" placeholder="Search events...">
+                <i class="search-icon fas fa-search"></i> <!-- FontAwesome icon -->
+            </div>
+        </header>
+
+        <div class="event-grid" id="eventGrid">
+            <!-- Events will be added dynamically here -->
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("eventGrid").addEventListener("click", function (e) {
+                const card = e.target.closest(".event-card");
+                if (card) {
+                    const eventId = card.querySelector(".edit-event-btn").getAttribute("data-id");
+                    window.location.href = `event-details.html?id=${eventId}`;
+                }
+            });
+        });
+    </script>
+    
+</body>
+</html>

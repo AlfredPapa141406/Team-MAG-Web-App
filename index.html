@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/script.js"></script> <!-- Link to JavaScript file -->
+</head>
+<body>
+    <div class="container">
+        <div class="image-section">
+            <img src="Files/team_mang.png" alt="Placeholder Image">
+        </div>
+        <div class="form-section">
+            <h1>TeamMang</h1>
+            
+            <!-- ✅ Login Form -->
+            <form action="php/login_process.php" method="POST">
+                <input type="email" name="email" placeholder="Username (Email)" maxlength="30">
+                <input type="password" name="password" placeholder="Password" maxlength="30">
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+
+            <!-- ✅ Signup Button -->
+            <button class="signup-btn" id="signupBtn">Signup</button>
+        </div>
+    </div>
+</body>
+</html>

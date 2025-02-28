@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Event</title>
+    <link rel="stylesheet" href="css/add-event.css">
+    <script defer src="js/add-event.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2>Add New Event</h2>
+            <button onclick="goBack()">Go Back</button>
+        </header>
+        
+        <div class="event-form-container">
+            <div class="form-section">
+                <div class="profile-placeholder">
+                    <img src="images/profile-placeholder.png" alt="Profile">
+                </div>
+                <form id="eventForm">
+                    <label>Event Name:</label>
+                    <input type="text" id="eventName">
+        
+                    <label>Place:</label>
+                    <input type="text" id="eventPlace">
+        
+                    <label>Date:</label>
+                    <input type="date" id="eventDate">
+        
+                    <label>Description:</label>
+                    <textarea id="eventDescription"></textarea>
+        
+                    <button type="submit">Create</button>
+                </form>
+            </div>  
+        </div>
+
+        <div class="image-upload-section">
+            <div class="main-image-preview">
+                <img id="mainImage" src="images/placeholder.jpg" alt="Event Image">
+            </div>
+            <div class="image-thumbnails" id="imageThumbnails"></div>
+            <input type="file" id="imageUpload" accept="image/*" multiple>
+            <br>
+            <br>
+            <button onclick="uploadImages()">Upload</button>
+        </div>
+    </div>
+</body>
+</html>
